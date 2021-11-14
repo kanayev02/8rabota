@@ -1,0 +1,70 @@
+﻿<Window x:Class="_8rabota.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_8rabota"
+        mc:Ignorable="d"
+        Title="Гимназия" Height="450" Width="800" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Text="Журнал 7 классов" HorizontalAlignment="Center" FontSize="20"/>
+            <TextBlock Text="Имя" HorizontalAlignment="Center"/>
+            <TextBox Name="Imy" Width="200"/>
+            <TextBlock Text="Фамилия" HorizontalAlignment="Center"/>
+            <TextBox Name="Famil" Width="200"/>
+            <TextBlock Text="Класс" HorizontalAlignment="Center"/>
+            <ComboBox Name="Class" Width="200">
+                <ComboBoxItem Content="7А"/>
+                <ComboBoxItem Content="7Б"/>
+                <ComboBoxItem Content="7В"/>
+                <ComboBoxItem Content="7Г"/>
+            </ComboBox>
+            <TextBlock Text="Форма обучения" HorizontalAlignment="Center"/>
+            <RadioButton Name="Den" Content="Дневная" HorizontalAlignment="Center"/>
+            <RadioButton Name="Noch" Content="Вечерняя" HorizontalAlignment="Center"/>
+            <TextBlock Text="Средние оценки по предметам" HorizontalAlignment="Center"/>
+            <TextBlock Text="Русский язык" HorizontalAlignment="Center"/>
+            <TextBox Name="Rus" Width="50"/>
+            <TextBlock Text="Математика" HorizontalAlignment="Center"/>
+            <TextBox Name="Mat" Width="50"/>
+            <TextBlock Text="Физика" HorizontalAlignment="Center"/>
+            <TextBox Name="Fiz" Width="50"/>
+            <Button Name="Zapisat" Content="Записать" Width="100" Click="Zapisat_Click"/>
+            <Button Name="Posmotret" Content="Посмотреть" Width="100" Click="Posmotret_Click"/>
+        </StackPanel>
+        <StackPanel Name="Posm" Grid.Column="1" Visibility="Collapsed">
+            <TextBlock Text="Имя"/>
+            <TextBlock Name="Imy2"/>
+            <TextBlock Text="Фамилия"/>
+            <TextBlock Name="Famil2"/>
+            <TextBlock Text="Класс"/>
+            <TextBlock Name="Class2"/>
+            <TextBlock Text="Форма обучения"/>
+            <TextBlock Name="Forma2"/>
+            <TextBlock Text="Средние оценки по предметам"/>
+            <TextBlock Text="Русский язык"/>
+            <TextBlock Name="Rus2"/>
+            <TextBlock Text="Математика"/>
+            <TextBlock Name="Mat2"/>
+            <TextBlock Text="Физика"/>
+            <TextBlock Name="Fiz2"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="Pervaya" Content="&lt;&lt;" Click="Pervaya_Click"/>
+                <Button Name="Nazad" Content="&lt;" Click="Nazad_Click"/>
+                <Button Name="Vpered" Content="&gt;" Click="Vpered_Click"/>
+                <Button Name="Posl" Content="&gt;&gt;" Click="Posl_Click"/>
+            </StackPanel>
+            <TextBlock Text="Поиск по фамилии"/>
+            <TextBox Name="Poi" Width="100"  HorizontalAlignment="Left"/>
+            <Button Name="Naiti" Content="Найти" HorizontalAlignment="Left" Width="50" Click="Naiti_Click"/>
+        </StackPanel>
+        <StackPanel Name="Kartinka" Grid.Column="1" Visibility="Visible">
+            <Image Source="Resources/image.jpg"/>
+        </StackPanel>
+    </Grid>
+</Window>
